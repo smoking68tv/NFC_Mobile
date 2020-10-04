@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
       title: 'Nice Navigation Demo',
       theme: ThemeData(
           primarySwatch: Colors.amber,
+          backgroundColor: BACKGROUND_COLOR_END,
           scaffoldBackgroundColor: BACKGROUND_COLOR_START),
       home: MainContainerWidget(),
     );
