@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/screenutil.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:new_nfc/util/ui/screen_size.dart';
 import 'package:new_nfc/widgets/main/main_container.dart';
 import 'package:new_nfc/widgets/navidation_drawer/blocs.dart';
 
 import 'configs/ui.dart';
-
-
 
 void main() {
   runApp(MyApp());
@@ -26,6 +26,14 @@ class MyApp extends StatelessWidget {
           backgroundColor: BACKGROUND_COLOR_END,
           scaffoldBackgroundColor: BACKGROUND_COLOR_START),
       home: MainContainerWidget(),
+      builder: (context, child) {
+        ScreenUtil.init(
+          context,
+          designSize: Size(ScreenSize.width,ScreenSize.height ),
+          allowFontScaling: true,
+        );
+        return child;
+      },
     );
   }
 }

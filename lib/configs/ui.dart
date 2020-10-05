@@ -1,5 +1,9 @@
+library UI;
+
 import 'package:flutter/cupertino.dart';
 import 'package:new_nfc/util/ui/colors.dart';
+export 'package:new_nfc/configs/ui/colors.dart';
+export 'package:new_nfc/configs/ui/font_size.dart';
 
 Color BACKGROUND_COLOR_START = HexColor('2CB1E9'),
     BACKGROUND_COLOR_END = HexColor('155994');

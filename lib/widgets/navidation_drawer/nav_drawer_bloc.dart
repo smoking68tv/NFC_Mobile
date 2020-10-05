@@ -11,7 +11,7 @@ class NavDrawerBloc extends Bloc<NavDrawerEvent, NavDrawerState> {
 // this is the initial state the user will see when 
   // the bloc is first created
   @override
-  NavDrawerState get initialState => NavDrawerState(NavItem.page_one);
+  NavDrawerState get initialState => NavDrawerState(NavItem.tasks);
   @override
   Stream<NavDrawerState> mapEventToState(NavDrawerEvent event) async* {
     // this is where the events are handled, if you want to call a method

@@ -11,7 +11,7 @@ class NavDrawerState {
 // Widget page_six = LoginPage();
 
 enum NavItem {
-  page_one,
+  tasks,
   page_two,
   page_three,
   page_four,

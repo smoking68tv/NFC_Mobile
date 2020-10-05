@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:new_nfc/configs/ui.dart';
 import 'package:new_nfc/screens/auth/loginView.dart';
+import 'package:new_nfc/screens/tasks/taskListView.dart';
 import 'package:new_nfc/widgets/appBar/appBar.dart';
 import 'package:new_nfc/widgets/navidation_drawer/blocs.dart';
 import 'package:new_nfc/widgets/navidation_drawer/nav_drawer.dart';
@@ -18,7 +19,7 @@ class _MainContainerState extends State<MainContainerWidget> {
   @override
   void initState() {
     super.initState();
-    _bloc = NavDrawerBloc(NavDrawerState(NavItem.page_one));
+    _bloc = NavDrawerBloc(NavDrawerState(NavItem.tasks));
     _content = _getContentForState(_bloc.state);
   }
 
@@ -69,6 +70,10 @@ class _MainContainerState extends State<MainContainerWidget> {
   Widget _getContentForState(NavDrawerState state) {
     if (state.selectedItem.index == 5) {
       return LoginPage();
+    }
+
+     if (state.selectedItem.index == 0) {
+      return TaskListPage();
     }
   }
 }

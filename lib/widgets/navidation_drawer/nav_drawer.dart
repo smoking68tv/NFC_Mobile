@@ -10,7 +10,7 @@ class NavDrawerWidget extends StatelessWidget {
 
   final List<_NavigationItem> _listItems = [
     _NavigationItem(true, null, null, null),
-    _NavigationItem(false, NavItem.page_one, "First Page", Icons.looks_one),
+    _NavigationItem(false, NavItem.tasks, "Оперативные задания", Icons.looks_one),
     _NavigationItem(false, NavItem.page_two, "Second Page", Icons.looks_two),
     _NavigationItem(false, NavItem.page_three, "Third Page", Icons.looks_3),
     _NavigationItem(false, NavItem.page_four, "Fourth Page", Icons.looks_4),
