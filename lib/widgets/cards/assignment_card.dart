@@ -178,7 +178,7 @@ class AssignmentCard extends StatelessWidget {
                         width: ScreenUtil().setWidth(1),
                       ),
                     ),
-                    splashColor: UiColors.defaultSplash,
+                    splashColor: UiColors.lightBlue,
                     padding: EdgeInsets.symmetric(
                       horizontal: ScreenUtil().setWidth(5.0),
                     ),

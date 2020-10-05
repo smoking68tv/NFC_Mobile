@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:new_nfc/configs/ui.dart';
 import 'package:new_nfc/screens/auth/loginView.dart';
+import 'package:new_nfc/screens/rounds/roundListView.dart';
+import 'package:new_nfc/widgets/cards/routine_card.dart';
 import 'package:new_nfc/screens/tasks/taskListView.dart';
 import 'package:new_nfc/widgets/appBar/appBar.dart';
 import 'package:new_nfc/widgets/navidation_drawer/blocs.dart';
@@ -72,8 +74,12 @@ class _MainContainerState extends State<MainContainerWidget> {
       return LoginPage();
     }
 
-     if (state.selectedItem.index == 0) {
+    if (state.selectedItem.index == 0) {
       return TaskListPage();
+    }
+
+    if (state.selectedItem.index == 1) {
+      return RoundListPage();
     }
   }
 }

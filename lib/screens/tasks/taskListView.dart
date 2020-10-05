@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:intl/intl.dart';
 import 'package:new_nfc/configs/ui/colors.dart';
 import 'package:new_nfc/widgets/cards/assignment_card.dart';
 import 'package:new_nfc/widgets/cards/file_wrapper.dart';
+import 'package:new_nfc/widgets/labels/label_card.dart';
 
 class TaskListPage extends StatelessWidget {
   @override
@@ -12,6 +14,11 @@ class TaskListPage extends StatelessWidget {
       child: Center(
         child: ListView(
           children: <Widget>[
+            LabelCard(
+              label: '${DateFormat('h:mm a | dd MMMM, yyyy').format(DateTime.now())}',
+              color: UiColors.defaultIcon,
+              width:  ScreenUtil().setWidth(20),
+            ),
             Padding(
               padding: EdgeInsets.all(ScreenUtil().setWidth(5.0)),
               child: AssignmentCard(
